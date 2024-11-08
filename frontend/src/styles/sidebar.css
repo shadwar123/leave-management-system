@@ -1,0 +1,9 @@
+.expansion-panel {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.muiexpansionpanel-root::before {
+    display: "none";
+}
