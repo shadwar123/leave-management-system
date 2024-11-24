@@ -63,21 +63,25 @@ export const LinksConfig: LinksConfigProps = {
             label: "Leave List",
             to: "list",
             element: <CircleOutlinedIcon sx={{ fontSize: ICON_SIZE }} />,
+            access: ["admin"],
         },
         {
             label: "Leave List Pending",
             to: "list-pending",
             element: <CircleOutlinedIcon sx={{ fontSize: ICON_SIZE }} />,
+            access: ["admin"],
         },
         {
             label: "Leave List Approved",
             to: "list-approved",
             element: <CircleOutlinedIcon sx={{ fontSize: ICON_SIZE }} />,
+            access: ["admin"],
         },
         {
             label: "Leave List Rejected",
             to: "list-rejected",
             element: <CircleOutlinedIcon sx={{ fontSize: ICON_SIZE }} />,
+            access: ["admin"],
         },
     ],
 };
