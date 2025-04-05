@@ -152,9 +152,10 @@ const transporter = nodemailer.createTransport({
 
 const sendEmail = (leaveType: string, totalDay: number, startDate: string, endDate: string) => {
     const verificationLink = `http://localhost:3000/leave/list-pending`;
+    console.log("email send 2");
     const mailOptions: nodemailer.SendMailOptions = {
         from: process.env.GMAIL_USER,
-        to: 'shadwarnayyar875@gmail.com',
+        to: 'saveshadwar@gmail.com',
         subject: 'Email Verification',
         text: `A ${leaveType} Leave has been created from ${startDate} to ${endDate}.`,
     };
@@ -183,7 +184,7 @@ export const addLeave = async (req: express.Request, res: express.Response) => {
         }
         sendEmail(leaveType,totalDay,startDate,endDate);
         // const username =  getUsersByIds(req, res);
-        // console.log("username", username);
+        console.log("email send");
         const leave = await createLeave({
             _user: currentUserId,
             leaveType,
